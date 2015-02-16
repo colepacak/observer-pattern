@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Observer pattern</title>
+  </head>
+  <body>
+    <div>Behold the power of the subject. Who could be listening?</div>
+    <input id="subject" type="number" name="subject" value="6" />
+    <button onclick="notifyObservers()">submit</button>
+    <ul>
+      <li id="addition">
+        <span>Add 5</span>
+        <button onclick="addObserver(addition)">start observing</button>
+        <button onclick="removeObserver(addition)">stop observing</button>
+        <span class="value">0</span>
+      </li>
+      <li id="multiplication">
+        <span>Multiply by 5</span>
+        <button onclick="addObserver(multiplication)">start observing</button>
+        <button onclick="removeObserver(multiplication)">stop observing</button>
+        <span class="value">0</span>
+      </li>
+    </ul>
+
+    <script src="subject.js"></script>
+    <script src="addition.js"></script>
+    <script src="multiplication.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
